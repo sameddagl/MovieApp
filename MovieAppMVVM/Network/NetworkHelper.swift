@@ -10,7 +10,7 @@ import Foundation
 struct NetworkHelper {
     static let shared = NetworkHelper()
     let baseURL = "https://api.themoviedb.org/3/movie/"
-    let apiKey = "api_key=3628cca7b1f145241f88009eac10fc7c"
+    let apiKey = ""
     let imagePath = "https://image.tmdb.org/t/p/w500/"
 
 }
