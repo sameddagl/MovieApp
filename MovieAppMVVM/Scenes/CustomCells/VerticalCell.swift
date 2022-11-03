@@ -21,4 +21,11 @@ class VerticalCell: UICollectionViewCell {
         titleLabel.text = data?.titleText ?? ""
         starLabel.text = "\(data?.star ?? "")/10 IMDb"
     }
+    func setup(title: String?, imageURL: String?, genres: [String]?, rate: Double? ){
+        movieImageView.sd_setImage(with: URL(string: imageURL ?? ""))
+        titleLabel.text = title ?? ""
+        starLabel.text = "\(rate ?? 0)/10 IMDb"
+        //self.genres = genres ?? []
+        //genreCollectionView.reloadData()
+    }
 }

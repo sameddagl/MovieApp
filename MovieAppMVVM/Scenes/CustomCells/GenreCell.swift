@@ -13,7 +13,7 @@ class GenreCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        bgView.layer.cornerRadius = bgView.frame.size.height / 2
+        bgView.layer.cornerRadius = bgView.frame.height / 5
     }
     func setup(title: String){
         genreTitle.text = title

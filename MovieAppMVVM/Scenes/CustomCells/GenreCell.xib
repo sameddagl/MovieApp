@@ -12,18 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="gTV-IL-0wX" customClass="GenreCell" customModule="MovieAppMVVM" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="61" height="18"/>
+            <rect key="frame" x="0.0" y="0.0" width="91" height="36"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="61" height="18"/>
+                <rect key="frame" x="0.0" y="0.0" width="91" height="36"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-QZ-Weq">
-                        <rect key="frame" x="0.0" y="0.0" width="61" height="18"/>
+                        <rect key="frame" x="0.0" y="0.0" width="91" height="36"/>
                         <color key="backgroundColor" name="genreBackground"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nov-je-ZBk">
-                        <rect key="frame" x="16.666666666666668" y="3" width="28.000000000000004" height="12"/>
+                        <rect key="frame" x="15" y="4" width="61" height="28"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                         <color key="textColor" name="genreTitle"/>
                         <nil key="highlightedColor"/>
@@ -32,19 +32,21 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="0n2-QZ-Weq" secondAttribute="trailing" id="ITL-Nl-aaf"/>
-                <constraint firstItem="0n2-QZ-Weq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XOP-fs-Crh"/>
-                <constraint firstItem="Nov-je-ZBk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="eWb-L7-G9z"/>
-                <constraint firstAttribute="bottom" secondItem="0n2-QZ-Weq" secondAttribute="bottom" id="fso-aE-HeM"/>
-                <constraint firstItem="Nov-je-ZBk" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="gd9-bV-fWn"/>
-                <constraint firstItem="0n2-QZ-Weq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="j8K-0b-JfD"/>
+                <constraint firstItem="Nov-je-ZBk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="7L6-Pd-XOv"/>
+                <constraint firstAttribute="trailing" secondItem="0n2-QZ-Weq" secondAttribute="trailing" id="Oks-39-SU4"/>
+                <constraint firstAttribute="trailing" secondItem="Nov-je-ZBk" secondAttribute="trailing" constant="15" id="T3v-8V-7kk"/>
+                <constraint firstItem="0n2-QZ-Weq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fEK-ER-OBs"/>
+                <constraint firstItem="Nov-je-ZBk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="gp9-pd-VNy"/>
+                <constraint firstItem="0n2-QZ-Weq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="htT-vk-tpQ"/>
+                <constraint firstAttribute="bottom" secondItem="0n2-QZ-Weq" secondAttribute="bottom" id="m5u-5f-fQS"/>
+                <constraint firstAttribute="bottom" secondItem="Nov-je-ZBk" secondAttribute="bottom" constant="4" id="zeo-ek-psA"/>
             </constraints>
-            <size key="customSize" width="161" height="64"/>
+            <size key="customSize" width="191" height="82"/>
             <connections>
                 <outlet property="bgView" destination="0n2-QZ-Weq" id="dRd-IJ-y0v"/>
                 <outlet property="genreTitle" destination="Nov-je-ZBk" id="66T-Y9-TqE"/>
             </connections>
-            <point key="canvasLocation" x="205.38461538461539" y="25.592417061611375"/>
+            <point key="canvasLocation" x="228.46153846153845" y="31.990521327014218"/>
         </collectionViewCell>
     </objects>
     <resources>

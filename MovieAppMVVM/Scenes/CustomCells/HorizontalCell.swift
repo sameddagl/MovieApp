@@ -34,11 +34,13 @@ class HorizontalCell: UICollectionViewCell {
         textLabel.text = data?.titleText ?? ""
         starLabel.text = "\(data?.star ?? "")/10 IMDb"
         genres = data?.genres ?? []
+        genreCollectionView.reloadData()
     }
+
     func createLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewCompositionalLayout { sectionNum, env in
-            let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .absolute(30)), subitems: [item])
+            let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(30), heightDimension: .estimated(40)))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(30), heightDimension: .estimated(40)), subitems: [item])
             let section = NSCollectionLayoutSection(group: group)
             section.interGroupSpacing = 8
             section.orthogonalScrollingBehavior = .continuous

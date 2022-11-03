@@ -8,9 +8,10 @@
 import UIKit
 import SDWebImage
 import PanModal
+import CoreData
 
 class DetailController: UIViewController {
-
+    
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -19,6 +20,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var castCollectionView: UICollectionView!
+    @IBOutlet weak var saveButton: UIButton!
     
     var movie: Result?
     var cast = [Cast]()
@@ -47,15 +49,19 @@ class DetailController: UIViewController {
                     return
                 }
             }
-            
         }
-        
+    }
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        save(title: movie!.title, rate: movie!.voteAverage, imagePath: movie!.posterImage, id: movie!.id)
+        sender.isSelected.toggle()
+    }
+    func save(title: String, rate: Double, imagePath: String, id: Int) {
     }
     func createLayout(for num: Int) -> UICollectionViewLayout{
         if num == 0{
             let layout = UICollectionViewCompositionalLayout { sectionNum, env in
-                let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .estimated(20)), subitems: [item])
+                let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(50), heightDimension: .estimated(20)))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(50), heightDimension: .estimated(20)), subitems: [item])
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
                 section.interGroupSpacing = 10
@@ -74,9 +80,9 @@ class DetailController: UIViewController {
             }
             return layout
         }
-
+        
     }
-
+    
 }
 extension DetailController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
