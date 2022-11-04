@@ -55,7 +55,7 @@ final class MovieHomeViewController: UIViewController {
         presentPanModal(vc)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetailView"{
+        if segue.identifier == K.homeToDetailSegue{
             let vc = segue.destination as! DetailController
             vc.movie = sender as? Result
         }
@@ -126,6 +126,7 @@ extension MovieHomeViewController: UICollectionViewDelegate, UICollectionViewDat
             return view
         }
     }
+    //MARK: - Select Item
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var data: Result?
         if indexPath.section == 0{
@@ -134,13 +135,12 @@ extension MovieHomeViewController: UICollectionViewDelegate, UICollectionViewDat
         else{
             data = movie?.results[indexPath.row]
         }
-        performSegue(withIdentifier: "goToDetailView", sender: data)
+        performSegue(withIdentifier: K.homeToDetailSegue, sender: data)
     }
 }
 extension MovieHomeViewController: FilterViewDelegate{
     func didSelectCategory(categoryTitle: String ,category: DataType) {
         self.headerTitle = categoryTitle
-        print(category)
         NetworkManager.shared.requestData(dataType: category, page: 1) { (result) in
             switch result{
             case .success(let movie):

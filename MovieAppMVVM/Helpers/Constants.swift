@@ -19,4 +19,9 @@ struct K{
     static let filterCellIdentifier = "FilterCell"
     static let castCellXib = "CastCell"
     static let castCellIdentifier = "CastCell"
+    static let favoriteMovieCellXib = "FavoriteMovieCell"
+    static let favoriteMovieCellIdentifier = "FavoriteMovieCell"
+    
+    static let homeToDetailSegue = "HomeToDetail"
+    static let favoritesToDetailSegue = "FavoritesToDetail"
 }

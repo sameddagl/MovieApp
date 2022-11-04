@@ -26,6 +26,9 @@
 		2CBDA5B229103C2500D30CAD /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA5B029103C2500D30CAD /* HorizontalCell.swift */; };
 		2CBDA5B329103C2500D30CAD /* HorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CBDA5B129103C2500D30CAD /* HorizontalCell.xib */; };
 		2CBDA5B529103D2E00D30CAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA5B429103D2E00D30CAD /* Constants.swift */; };
+		2CC18B14291568FF003CD2F6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CC18B12291568FF003CD2F6 /* DataModel.xcdatamodeld */; };
+		2CC18B1729156E1F003CD2F6 /* FavoriteMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC18B1529156E1F003CD2F6 /* FavoriteMovieCell.swift */; };
+		2CC18B1829156E1F003CD2F6 /* FavoriteMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC18B1629156E1F003CD2F6 /* FavoriteMovieCell.xib */; };
 		2CCAB55D2910FCB000EADDE1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2CCAB55C2910FCB000EADDE1 /* SDWebImage */; };
 		2CCAB562291125E400EADDE1 /* ReusableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAB560291125E400EADDE1 /* ReusableHeader.swift */; };
 		2CCAB563291125E400EADDE1 /* ReusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCAB561291125E400EADDE1 /* ReusableHeader.xib */; };
@@ -60,6 +63,9 @@
 		2CBDA5B029103C2500D30CAD /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
 		2CBDA5B129103C2500D30CAD /* HorizontalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalCell.xib; sourceTree = "<group>"; };
 		2CBDA5B429103D2E00D30CAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2CC18B13291568FF003CD2F6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		2CC18B1529156E1F003CD2F6 /* FavoriteMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieCell.swift; sourceTree = "<group>"; };
+		2CC18B1629156E1F003CD2F6 /* FavoriteMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteMovieCell.xib; sourceTree = "<group>"; };
 		2CCAB560291125E400EADDE1 /* ReusableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableHeader.swift; sourceTree = "<group>"; };
 		2CCAB561291125E400EADDE1 /* ReusableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableHeader.xib; sourceTree = "<group>"; };
 		2CCAB56429112B6100EADDE1 /* VerticalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCell.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 		2C1362BE2913C32800D1B144 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				2CC18B12291568FF003CD2F6 /* DataModel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 				2CCAB569291148D400EADDE1 /* GenreCell.xib */,
 				2CCAB57129119A9400EADDE1 /* CastCell.swift */,
 				2CCAB57229119A9400EADDE1 /* CastCell.xib */,
+				2CC18B1529156E1F003CD2F6 /* FavoriteMovieCell.swift */,
+				2CC18B1629156E1F003CD2F6 /* FavoriteMovieCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 				2CA486FB290FC36E00F3EFE6 /* LaunchScreen.storyboard in Resources */,
 				2CA486F8290FC36E00F3EFE6 /* Assets.xcassets in Resources */,
 				2CA486F6290FC36C00F3EFE6 /* Main.storyboard in Resources */,
+				2CC18B1829156E1F003CD2F6 /* FavoriteMovieCell.xib in Resources */,
 				2CCAB563291125E400EADDE1 /* ReusableHeader.xib in Resources */,
 				2CBDA5B329103C2500D30CAD /* HorizontalCell.xib in Resources */,
 				2CCAB56729112B6100EADDE1 /* VerticalCell.xib in Resources */,
@@ -295,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCAB562291125E400EADDE1 /* ReusableHeader.swift in Sources */,
+				2CC18B14291568FF003CD2F6 /* DataModel.xcdatamodeld in Sources */,
 				2CA48715290FD20300F3EFE6 /* NetworkManager.swift in Sources */,
 				2CA4870E290FCE4500F3EFE6 /* Credits.swift in Sources */,
 				2CA48717290FD21100F3EFE6 /* NetworkHelper.swift in Sources */,
@@ -309,6 +320,7 @@
 				2CCAB5702911589F00EADDE1 /* FilterViewController.swift in Sources */,
 				2CCAB57329119A9400EADDE1 /* CastCell.swift in Sources */,
 				2CA48709290FCE1800F3EFE6 /* MovieHomeViewController.swift in Sources */,
+				2CC18B1729156E1F003CD2F6 /* FavoriteMovieCell.swift in Sources */,
 				2CA486EF290FC36C00F3EFE6 /* AppDelegate.swift in Sources */,
 				2CA486F1290FC36C00F3EFE6 /* SceneDelegate.swift in Sources */,
 				2CA48707290FCDFF00F3EFE6 /* Movie.swift in Sources */,
@@ -468,7 +480,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +493,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -501,7 +513,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +526,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -585,6 +597,19 @@
 			productName = PanModal;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2CC18B12291568FF003CD2F6 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CC18B13291568FF003CD2F6 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 2CC18B13291568FF003CD2F6 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2CA486E3290FC36C00F3EFE6 /* Project object */;
 }
